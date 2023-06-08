@@ -12,6 +12,12 @@ pipeline {
         stage('Install Dependencies') {
             steps {
                 // Install dependencies using npm or yarn
+                sh 'install npm'  // or 'yarn install'
+            }
+        }
+        stage('Install Dependencies') {
+            steps {
+                // Install dependencies using npm or yarn
                 sh 'npm install'  // or 'yarn install'
             }
         }
