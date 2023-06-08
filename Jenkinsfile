@@ -13,7 +13,7 @@ pipeline {
             steps {
                 dir('') {
                     // Install dependencies using Yarn
-                    sh 'yarn install'
+                    sh 'npm install'
                 }
             }
         }
@@ -21,14 +21,14 @@ pipeline {
         stage('Build') {
             steps {
                 // Build your Node.js app using Yarn
-                sh 'yarn build'
+                sh 'npm build'
             }
         }
 
         stage('Run Tests') {
             steps {
                 // Run tests for your Node.js app using Yarn
-                sh 'yarn test'
+                sh 'npm test'
             }
         }
     }
