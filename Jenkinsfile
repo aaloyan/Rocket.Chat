@@ -8,7 +8,15 @@ pipeline {
                 checkout scm
             }
         }
-
+        
+         stage('Install Dependencies') {
+            steps {
+                dir('') {
+                    // Install dependencies using Yarn
+                    sh 'apt install yarn'
+                }
+            }
+        }
         stage('Install Dependencies') {
             steps {
                 dir('') {
