@@ -9,7 +9,7 @@ pipeline {
             }
         }
         
-         stage('Install Dependencies') {
+         stage('Install yarn') {
             steps {
                 dir('') {
                     // Install dependencies using Yarn
