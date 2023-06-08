@@ -15,7 +15,7 @@ pipeline {
                 dir('') {
                     sh 'npm install'
                 // Install dependencies using npm or yarn
-                sh 'npm install'  // or 'yarn install'
+                sh 'cd $WORKSPACE && npm install'  // or 'yarn install'
             }
         }
 
