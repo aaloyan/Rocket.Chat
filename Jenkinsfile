@@ -13,7 +13,7 @@ pipeline {
             steps {
                 dir('') {
                     // Install dependencies using Yarn
-                    sh 'apt install yarn'
+                    sh 'apt install yarn -y'
                 }
             }
         }
