@@ -20,14 +20,15 @@ pipeline {
         stage('Install Dependencies') {
             steps {
                 dir('/var/lib/jenkins/workspace/Fork-rocket/') {
-                 // Remove existing yarn.lock file if present
-                 sh 'rm -f yarn.lock'
+                   // Remove existing yarn.lock file if present
+                  sh 'rm -f yarn.lock'
 
-            // Install dependencies using Yarn
-                 sh 'yarn install --frozen-lockfile'
+                 // Install dependencies using Yarn
+                 sh 'yarn install'
                 }
-            }
-        }
+           }
+        }           
+
 
 //         stage('Install Dependencies') {
 //             steps {
