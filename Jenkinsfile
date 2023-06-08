@@ -13,9 +13,9 @@ pipeline {
             steps {
                 dir('') {
                     // Install dependencies using npm or yarn
-                    sh 'npm install'
+                    sh 'yarn install'
                 }
-                sh 'cd /var/lib/jenkins/workspace/Fork-rocket && npm install'  // Replace with your actual workspace path
+                sh 'cd /var/lib/jenkins/workspace/Fork-rocket && yarn install'  // Replace with your actual workspace path
             }
         }
 
