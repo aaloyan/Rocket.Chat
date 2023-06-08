@@ -21,10 +21,19 @@ pipeline {
             steps {
                 dir('/var/lib/jenkins/workspace/Fork-rocket/') {
                     // Install dependencies using Yarn
-                    sh 'yarn install'
-                }
-            }
+                    sh 'yarn'
         }
+    }
+}
+
+        // stage('Install Dependencies') {
+        //     steps {
+        //         dir('/var/lib/jenkins/workspace/Fork-rocket/') {
+        //             // Install dependencies using Yarn
+        //             sh 'yarn install'
+        //         }
+        //     }
+        // }
 
         stage('Build') {
             steps {
