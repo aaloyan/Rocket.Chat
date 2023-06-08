@@ -12,13 +12,25 @@ pipeline {
         stage('Install Dependencies') {
             steps {
                 dir('') {
-                    // Install dependencies using npm or yarn
+                    // Install dependencies using Yarn
                     sh 'yarn install'
                 }
-                sh 'cd /var/lib/jenkins/workspace/Fork-rocket && yarn install'  // Replace with your actual workspace path
             }
         }
 
-        // Rest of the stages...
+        stage('Build') {
+            steps {
+                // Build your Node.js app using Yarn
+                sh 'yarn build'
+            }
+        }
+
+        stage('Run Tests') {
+            steps {
+                // Run tests for your Node.js app using Yarn
+                sh 'yarn test'
+            }
+        }
     }
 }
+s
