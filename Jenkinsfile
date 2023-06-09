@@ -40,7 +40,8 @@ pipeline {
         // }
 
         stage('Build') {
-            steps dir("/var/lib/jenkins/workspace/Fork-rocket/") {
+            steps  {
+                dir('/var/lib/jenkins/workspace/Fork-rocket/')
                 // Build your Node.js app using Yarn
                 sh 'yarn build'
             }
