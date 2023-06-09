@@ -1,0 +1,26 @@
+# .gitlab-ci.yml
+
+stages:
+  - build
+  - test
+
+before_script:
+  - apt-get update -y
+  - apt-get install -y curl
+  - curl -sL https://deb.nodesource.com/setup_14.x | bash -
+  - apt-get install -y nodejs
+
+cache:
+  paths:
+    - node_modules/
+
+build:
+  stage: build
+  script:
+    - npm ci --unsafe-perm
+    - npm run build
+
+test:
+  stage: test
+  script:
+    - npm run test
