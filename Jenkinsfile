@@ -18,16 +18,16 @@ pipeline {
             }
         }
         
-        stage('Install Dependencies') {
-            steps {
-                dir('/var/lib/jenkins/workspace/Fork-rocket/') {
-                    // Clean installation by removing the node_modules directory
-                    sh 'rm -rf node_modules'
-                    // Install dependencies using Yarn
-                    sh 'yarn install'
-                }
-            }
-        }
+        // stage('Install Dependencies') {
+        //     steps {
+        //         dir('/var/lib/jenkins/workspace/Fork-rocket/') {
+        //             // Clean installation by removing the node_modules directory
+        //             sh 'rm -rf node_modules'
+        //             // Install dependencies using Yarn
+        //             sh 'yarn install'
+        //         }
+        //     }
+        // }
         
         stage('Build') {
             steps {
