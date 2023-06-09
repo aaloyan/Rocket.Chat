@@ -26,14 +26,15 @@ pipeline {
                 //    sh 'yarn install'
                }
            }
-        }
         stage('Build') {
             steps {
                 dir('/var/lib/jenkins/workspace/Fork-rocket/') {
-                    sh 'yarn build'
+                   sh 'yarn global add turbo-cli' // Install turbo-cli globally if not already installed
+                   sh 'turbo run build' // Execute the build scenario using the turbo command
                 }
             }
         }
+
 
         // stage('Install Dependencies') {
         //     steps {
