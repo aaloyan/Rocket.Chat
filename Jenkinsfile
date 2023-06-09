@@ -30,7 +30,7 @@ pipeline {
         stage('Build') {
             steps {
                 dir('/var/lib/jenkins/workspace/Fork-rocket/') {
-                    sh 'yarn run build'
+                    sh 'turbo run build'
                 }
             }
         }
