@@ -14,6 +14,7 @@ pipeline {
                 dir('') {
                     // Install dependencies using Yarn
                     sh 'apt install yarn -y'
+                    sh 'yarn global add turbo-cli'
                 }
             }
         }
