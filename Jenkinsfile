@@ -23,8 +23,8 @@ pipeline {
             // Clean installation by removing the node_modules directory
                    sh 'rm -rf node_modules'
 
-                    // Install dependencies using Yarn
-                   sh 'yarn install'
+                //     // Install dependencies using Yarn
+                //    sh 'yarn install'
                }
            }
         }
